@@ -23,8 +23,18 @@ public abstract class Circle extends Shape{
         this.radius = radius;
     }
 
-    public abstract double getArea();
-    public abstract double getPerimeter();
+    public double getArea(){
+
+        double area = 3.14 * getRadius() * getRadius();
+        return area;
+
+    };
+
+    public double getPerimeter(){
+
+        double perimeter = 2 * 3.14 * getRadius();
+        return perimeter;
+    };
 
     @Override
     public String toString() {
