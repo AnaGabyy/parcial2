@@ -35,8 +35,15 @@ public abstract class Rectangle extends Shape{
         this.length = length;
     }
 
-    public abstract double getArea();
-    public abstract double getPerimeter();
+    public double getArea(){
+        double areaRectangle = getLength() * getWidth();
+        return areaRectangle;
+    }
+
+    public double getPerimeter(){
+        double perimeterRectangle = 2 * getLength() + 2 * getWidth();
+        return perimeterRectangle;
+    }
 
     @Override
     public String toString() {
