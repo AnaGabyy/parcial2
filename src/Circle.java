@@ -25,15 +25,15 @@ public abstract class Circle extends Shape{
 
     public double getArea(){
 
-        double area = 3.14 * getRadius() * getRadius();
-        return area;
+        double areaCircle = 3.14 * getRadius() * getRadius();
+        return areaCircle;
 
     };
 
     public double getPerimeter(){
 
-        double perimeter = 2 * 3.14 * getRadius();
-        return perimeter;
+        double perimeterCircle = 2 * 3.14 * getRadius();
+        return perimeterCircle;
     };
 
     @Override
