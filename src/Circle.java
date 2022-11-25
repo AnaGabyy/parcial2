@@ -24,22 +24,18 @@ public class Circle extends Shape{
     }
 
     public double getArea(){
-
         double areaCircle = 3.14 * getRadius() * getRadius();
         return areaCircle;
-
     };
 
     public double getPerimeter(){
-
         double perimeterCircle = 2 * 3.14 * getRadius();
         return perimeterCircle;
     };
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                '}';
+        return super.toString() + " Circle[radius=" + radius +
+                ']';
     }
 }
