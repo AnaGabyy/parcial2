@@ -22,12 +22,11 @@ public class Square extends Rectangle {
     public void setSide(double side) {
         setWidth(side);
         setLength(side);
+        this.side = side;
     }
 
     @Override
     public String toString() {
-        return "Square{" +
-                "side=" + side +
-                '}';
+        return super.toString();
     }
 }
