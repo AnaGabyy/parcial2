@@ -1,11 +1,23 @@
 @startuml
-class Circle {
-- double radius
-+ <<Create>> Circle()
-+ <<Create>> Circle(double)
-+ <<Create>> Circle(String,boolean,double)
-+ double getRadius()
-+ void setRadius(double)
+class Square {
+- double side
++ <<Create>> Square()
++ <<Create>> Square(double)
++ <<Create>> Square(String,boolean,double)
++ double getSide()
++ void setSide(double)
++ String toString()
+}
+class Rectangle {
+- double width
+- double length
++ <<Create>> Rectangle()
++ <<Create>> Rectangle(double,double)
++ <<Create>> Rectangle(String,boolean,double,double)
++ double getWidth()
++ void setWidth(double)
++ double getLength()
++ void setLength(double)
 + double getArea()
 + double getPerimeter()
 + String toString()
@@ -23,16 +35,13 @@ abstract class Shape {
 + {abstract}double getPerimeter()
 + String toString()
 }
-class Rectangle {
-- double width
-- double length
-+ <<Create>> Rectangle()
-+ <<Create>> Rectangle(double,double)
-+ <<Create>> Rectangle(String,boolean,double,double)
-+ double getWidth()
-+ void setWidth(double)
-+ double getLength()
-+ void setLength(double)
+class Circle {
+- double radius
++ <<Create>> Circle()
++ <<Create>> Circle(double)
++ <<Create>> Circle(String,boolean,double)
++ double getRadius()
++ void setRadius(double)
 + double getArea()
 + double getPerimeter()
 + String toString()
@@ -40,18 +49,9 @@ class Rectangle {
 class Main {
 + {static} void main(String[])
 }
-class Square {
-- double side
-+ <<Create>> Square()
-+ <<Create>> Square(double)
-+ <<Create>> Square(String,boolean,double)
-+ double getSide()
-+ void setSide(double)
-+ String toString()
-}
 
 
-Shape <|-- Circle
-Shape <|-- Rectangle
 Rectangle <|-- Square
+Shape <|-- Rectangle
+Shape <|-- Circle
 @enduml
